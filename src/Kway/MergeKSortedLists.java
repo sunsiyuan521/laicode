@@ -1,3 +1,9 @@
+/*
+134. Merge K Sorted Lists
+Merge K sorted lists into one big sorted list in ascending order.
+Assumptions
+ListOfLists is not null, and none of the lists is null.
+* */
 package Kway;
 import PublicClass.ListNode;
 import java.util.Comparator;
