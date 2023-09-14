@@ -1,4 +1,7 @@
 package Sort;
+
+import java.util.Random;
+
 /*
 * 10. Quick Sort
 Given an array of integers, sort the elements in the array in ascending order. The quick sort algorithm should be used to solve this problem.
@@ -12,7 +15,7 @@ What if the given array is null? In this case, we do not need to do anything.
 What if the given array is of length zero? In this case, we do not need to do anything.
 * */
 public class QuickSort {
-    //private Random random = new Random();
+    private Random random = new Random();
     public int[] quickSort(int[] array) {
         // corner case
         if(array == null || array.length <= 1) {
@@ -26,8 +29,8 @@ public class QuickSort {
             return array;
         }
         //Step1:choose pivot,把pivot index放在整个呆排序区域的末尾
-        //int pivotIndex = left + random.nextInt(right - left + 1);
-        int pivotIndex = left + (int)Math.random()* (right - left + 1);
+        int pivotIndex = left + random.nextInt(right - left + 1);
+        //int pivotIndex = left + (int)Math.random()* (right - left + 1);
         swap(array, pivotIndex, right);
         //Step2:Partition[left, right - 1]
         // 先尝试移动i,如果input[i] < pivot,i++
